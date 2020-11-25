@@ -121,8 +121,13 @@
               "devServerTarget": "challenge-sem2-assessment:serve:production"
             }
           }
+        },
+        "deploy": {
+          "builder": "@angular/fire:deploy",
+          "options": {}
         }
       }
-    }},
+    }
+  },
   "defaultProject": "challenge-sem2-assessment"
 }

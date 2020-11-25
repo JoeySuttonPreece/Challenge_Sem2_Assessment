@@ -1,0 +1,11 @@
+{
+  "targets": {
+    "challenge-sem2-assessment": {
+      "hosting": {
+        "challenge-sem2-assessment": [
+          "challenge-sem2-assessment"
+        ]
+      }
+    }
+  }
+}
