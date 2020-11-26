@@ -83,6 +83,7 @@ export class AppComponent {
         this.pending = null;
         this.members = null;
         this.gamesUpcoming = null;
+        this.gamesPast = null;
       }
     });
   }
