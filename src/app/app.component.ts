@@ -104,14 +104,19 @@ export class AppComponent {
   async login() {
     try {
       if (this.email.length > 0 && this.password.length > 0) {
-        await this.auth.signInWithEmailAndPassword(this.email, this.password);
+        let creds = await this.auth.signInWithEmailAndPassword(this.email, this.password);
       }
     } catch (e) { console.error(e) }
   }
 
   async loginWithGoogle() {
     try {
-      this.auth.signInWithPopup(new firebase.auth.GoogleAuthProvider())
+      let user = (await this.auth.signInWithPopup(new firebase.auth.GoogleAuthProvider())).user;
+      await this.firestore.collection("users").doc(user.uid).set({
+        role: "pending",
+        email: user.email,
+        total: 0,
+      });
     } catch (e) { console.error(e) }
   }
 
