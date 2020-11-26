@@ -8,7 +8,7 @@
 ## test data
 
 authorised member:  
-username: beans@beans.com  
+username: bean@beans.com  
 password: beansbeans
 
 pending member:  
