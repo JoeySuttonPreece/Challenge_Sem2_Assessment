@@ -108,6 +108,12 @@ export class AppComponent {
     } catch (e) { console.error(e) }
   }
 
+  async loginWithGoogle() {
+    try {
+      this.auth.signInWithPopup(new firebase.auth.GoogleAuthProvider())
+    } catch (e) { console.error(e) }
+  }
+
   async logout() {
     try {
       await this.auth.signOut();
